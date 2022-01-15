@@ -1,7 +1,7 @@
 console.log('client side js is loaded')
 
 const fetchWeather = (loc)=>{
-    fetch(`http://localhost:3001/weather?address=${loc}`).then((response)=>{
+    fetch(`/weather?address=${loc}`).then((response)=>{
         response.json().then((weatherObject)=>{
             if(weatherObject.error){
                 return console.log(weatherObject.error)

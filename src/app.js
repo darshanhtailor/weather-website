@@ -3,6 +3,7 @@ const weather = require('./weather')
 const express = require('express')
 const hbs = require('hbs')
 const app = express()
+const port = process.env.PORT || 3000
 
 const publicDir = path.join(__dirname, '../public')
 app.use(express.static(publicDir))
@@ -74,6 +75,6 @@ app.get('*', (req, res)=>{
     })
 })
 
-app.listen(3001, ()=>{
+app.listen(port, ()=>{
     console.log('Server started')
 })
